@@ -1,0 +1,39 @@
+{
+  "etudiants": [
+    {
+      "id": 1,
+      "name": "zouhir",
+      "prenom": "amrani",
+      "date": "01/03/2000",
+      "note": 18
+    },
+    {
+      "id": 2,
+      "name": "yasin",
+      "prenom": "omari",
+      "date": "05/03/2003",
+      "note": 20
+    },
+    {
+      "name": "Rida",
+      "prenom": "amrani",
+      "date": "1999-03-06",
+      "note": "19",
+      "id": 4
+    },
+    {
+      "name": "amin",
+      "prenom": "samiri",
+      "date": "2013-02-04",
+      "note": "13",
+      "id": 6
+    },
+    {
+      "name": "fatima",
+      "prenom": "tima",
+      "date": "1999-03-07",
+      "note": "9",
+      "id": 7
+    }
+  ]
+}
