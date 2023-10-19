@@ -1,13 +1,6 @@
 {
   "etudiants": [
     {
-      "id": 1,
-      "name": "zouhir",
-      "prenom": "amrani",
-      "date": "01/03/2000",
-      "note": 18
-    },
-    {
       "id": 2,
       "name": "yasin",
       "prenom": "omari",
@@ -34,6 +27,20 @@
       "date": "1999-03-07",
       "note": "9",
       "id": 7
+    },
+    {
+      "name": "yasmin",
+      "prenom": "yasmina",
+      "date": "1999-03-04",
+      "note": "4",
+      "id": 8
+    },
+    {
+      "name": "samir",
+      "prenom": "alawi",
+      "date": "2012-05-05",
+      "note": "9",
+      "id": 10
     }
   ]
 }

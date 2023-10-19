@@ -16,7 +16,7 @@ const DesplayEtudiont  =async function(){
                 <td>${etudiant.prenom}</td>
                 <td>${etudiant.gitAge()} ans</td>
                 <td><span class="badge rounded-pill ${etudiant.isAdmitted()? 'text-bg-success':'text-bg-danger'}">${etudiant.not} / ${Etudiant.MaxNot}</span></td>
-                <td><button class='btn btn-danger btn-sm'>Supprimer</button></td>
+                <td><button class='btn btn-danger btn-sm delete' data-id ='${id}' >Supprimer</button></td>
                
             </tr>
             `
@@ -29,8 +29,9 @@ const renderEtudiants =function(){
     const body = document.querySelector('.list-etudiont')
     DesplayEtudiont().then(
         function(date){
-            console.log(date)
+            // console.log(date)
             body.innerHTML=date.join(" ")   // innerHTML appelle tostring (,)
+            init();
         }
          )
 }
@@ -51,7 +52,20 @@ const init = function () {
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevents the form from submitting
         addetudiant(); // Call your function to handle form submission here
+        
     });
+
+    
+    const deletbutton = document.querySelectorAll('.delete');
+deletbutton.forEach((button) => {
+    button.addEventListener('click',()=>{
+        window.deletetudiont(button.dataset.id);
+
+    })
+});
+
+ 
+   
 }
 
 //function for add etudiont from Formuler and call to AjouterEtudiant for setdata in API Json
@@ -63,7 +77,13 @@ const addetudiant = function() {
 
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    init();
-});
+
+window.deletetudiont =function (id){
+    Etudiant.DeleteEtudiant(id).then(()=>alert('Etudiant supprime'))
+    console.log(id)
+}
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     init();
+// });
 

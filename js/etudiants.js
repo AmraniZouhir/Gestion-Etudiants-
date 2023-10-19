@@ -31,6 +31,7 @@ export default class Etudiant{
 
         
 //Function For Ajouter Etudiaont
+//"http://localhost:3000/etudiants" (Post)Ajouter
         AjouterEtudiant =async function (){
         const Response =await fetch(Endpoint,{
             method :"POST" ,
@@ -49,10 +50,11 @@ export default class Etudiant{
         return Response
         
     }
+    
+//"http://localhost:3000/etudiants /{id}" (DELET)Suppreme
 
-
-    SuppremeEtudiant =async function (){
-        const Response =await fetch(Endpoint ,{
+    static DeleteEtudiant =async function (id){
+        const Response =await fetch(Endpoint+'/'+ id ,{
             method :"DELETE" ,
             headers : {"Content-Type":"application/json"},
            
