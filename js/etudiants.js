@@ -42,7 +42,7 @@ export default class Etudiant{
                     name : this.nom,
                     prenom : this.prenom,
                     date : this.age,
-                    note : this.not,
+                    note :parseFloat(this.not) ,
                 }
             )
         })
@@ -56,7 +56,7 @@ export default class Etudiant{
     static DeleteEtudiant =async function (id){
         const Response =await fetch(Endpoint+'/'+ id ,{
             method :"DELETE" ,
-            headers : {"Content-Type":"application/json"},
+            0 : {"Content-Type":"application/json"},
            
         })
         console.log(Response)
